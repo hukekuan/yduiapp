@@ -5,11 +5,20 @@ import HelloWorld from '@/components/HelloWorld'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  base: '/',
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      redirect: '/map'
+    },
+    {
+      path: '/main1',
+      component: resolve => require(['../components/HelloWorld.vue'], resolve)
+    },
+    {
+      path: '/map',
+      component: resolve => require(['../components/OLMap.vue'], resolve)
     }
   ]
 })
