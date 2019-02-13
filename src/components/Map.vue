@@ -3,11 +3,11 @@
 </template>
 
 <script>
-  import olmap from  './OLMap.vue'
-  export default {
-    name: 'Map',
-    components: {olmap}
-  }
+import olmap from './OLMap.vue'
+export default {
+  name: 'Map',
+  components: {olmap}
+}
 </script>
 
 <style scoped>

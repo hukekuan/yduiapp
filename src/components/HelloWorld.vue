@@ -1,16 +1,21 @@
 <template>
-  <h1>这是 hello 组件，这是消息：{{msg}} --- {{myMsg}}</h1>
+  <!--<h1>这是 hello 组件，{{info}}：{{messageObj.tabs}} -&#45;&#45; {{messageObj.ids}}</h1>-->
+  <button @click="fn">按钮</button>
 </template>
 
 <script>
 export default {
   data () {
     return {
-//      msg: 'Welcome to Your Vue.js App',
-//      myMsg:'8080'
+      info: 'this is message'
     }
   },
-  props: ['msg', 'myMsg']
+  methods: {
+    fn () {
+      this.$emit('pfn1', '这是子组件传递给父组件的数据')
+    }
+  }
+  // , props: ['messageObj']
 }
 </script>
 
