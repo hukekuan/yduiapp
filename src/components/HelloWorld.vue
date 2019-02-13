@@ -1,19 +1,18 @@
 <template>
-  <div>
-  </div>
+  <h1>这是 hello 组件，这是消息：{{msg}} --- {{myMsg}}</h1>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+//      msg: 'Welcome to Your Vue.js App',
+//      myMsg:'8080'
     }
-  }
+  },
+  props: ['msg', 'myMsg']
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>

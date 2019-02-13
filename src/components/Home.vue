@@ -6,12 +6,15 @@
     <yd-button size="large" type="disabled" disabled>disabled</yd-button>
     <yd-button size="large" type="hollow">hollow</yd-button>
     <yd-button size="large" bgcolor="#000" color="#FFF">Custom Color</yd-button>
+    <hello msg="120" my-msg="'abc'"></hello>
   </div>
 </template>
 
 <script>
+  import hello from './HelloWorld.vue'
   export default {
     name: 'Home',
+    components: {hello},
     methods: {
       openConfrim() {
         this.$dialog.confirm({
