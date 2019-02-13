@@ -50,7 +50,25 @@
               style: 'default'
             }),
             visible: true
-          })
+          }),
+          new TileLayer({
+            name: "cia",
+            aliasName: "影像中文注记",
+            source: new WMTS({
+              url: 'http://t{0-6}.tianditu.com/cia_c/wmts?tk=acdf02e9d8aea4d35821080c118c390e',
+              layer: 'cia',
+              format: 'tiles',
+              projection: projection,
+              tileGrid: new WMTSTileGrid({
+                origin: getTopLeft(projectionExtent),
+                resolutions: resolutions,
+                matrixIds: matrixIds
+              }),
+              matrixSet: "c",
+              style: 'default'
+            }),
+            visible: true
+          }),
         ],
         view: new View({
           projection: 'EPSG:4326',
@@ -65,7 +83,10 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .map {
-    height: 100%;
+    top:0px;
+    margin:0 auto;
     width: 100%;
+    height:100%;
+    position:absolute;
   }
 </style>

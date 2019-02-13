@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
@@ -10,15 +9,27 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/map'
+      redirect: '/home'
     },
     {
-      path: '/main1',
-      component: resolve => require(['../components/HelloWorld.vue'], resolve)
+      path: '/home',
+      component: resolve => require(['../components/Home.vue'], resolve),
+      meta: {
+        title: '首页',
+        navShow: false,
+        tabShow: true,
+        keepAlive: false
+      }
     },
     {
       path: '/map',
-      component: resolve => require(['../components/OLMap.vue'], resolve)
+      component: resolve => require(['../components/Map.vue'], resolve),
+      meta: {
+        title: '购物车',
+        navShow: false,
+        tabShow: true,
+        keepAlive: false
+      }
     }
   ]
 })

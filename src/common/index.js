@@ -1,5 +1,6 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+/**
+ * Created by hukekuan on 2019/2/1.
+ */
 import Vue from 'vue'
 import 'vue-ydui/dist/ydui.base.css'
 import {ActionSheet} from 'vue-ydui/dist/lib.rem/actionsheet'
@@ -13,9 +14,6 @@ import {Badge} from 'vue-ydui/dist/lib.rem/badge'
 import {Layout} from 'vue-ydui/dist/lib.rem/layout'
 import {Slider, SliderItem} from 'vue-ydui/dist/lib.rem/slider'
 import { Confirm, Alert, Toast, Notify, Loading } from 'vue-ydui/dist/lib.rem/dialog'
-import App from './App'
-import router from './router'
-Vue.config.productionTip = false
 
 Vue.component(ActionSheet.name, ActionSheet)
 Vue.component(Button.name, Button)
@@ -42,10 +40,27 @@ Vue.prototype.$dialog = {
   loading: Loading,
 }
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
-})
+export default {
+  ActionSheet,
+  Button,
+  ButtonGroup,
+  CellGroup,
+  CellItem,
+  Icons,
+  ListTheme,
+  ListItem,
+  ListOther,
+  GridsGroup,
+  GridsItem,
+  TabBar,
+  TabBarItem,
+  Badge,
+  Layout,
+  Slider,
+  SliderItem,
+  Confirm,
+  Alert,
+  Toast,
+  Notify,
+  Loading
+}
