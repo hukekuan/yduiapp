@@ -1,20 +1,10 @@
 <template>
-  <yd-layout id="app">
-    <transition name="router-fade" mode="out-in">
-      <router-view v-if="!$route.meta.keepAlive"></router-view>
-    </transition>
-
-    <tabbar slot="tabbar" v-show="$route.meta.tabShow"></tabbar>
-  </yd-layout>
+  <router-view></router-view>
 </template>
 
 <script>
-  import tabbar from './components/TabBar.vue'
   export default {
-      name: 'App',
-    components: {
-      tabbar
-    }
+      name: 'App'
   }
 </script>
 <style scoped>

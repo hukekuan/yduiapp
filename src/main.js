@@ -43,6 +43,7 @@ Vue.prototype.$dialog = {
 }
 
 /* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   router,

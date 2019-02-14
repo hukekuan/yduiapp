@@ -1,6 +1,6 @@
 <template>
   <!--<h1>这是 hello 组件，{{info}}：{{messageObj.tabs}} -&#45;&#45; {{messageObj.ids}}</h1>-->
-  <button @click="fn">按钮</button>
+  <button @click="fn" id="hello">按钮</button>
 </template>
 
 <script>
