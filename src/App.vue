@@ -8,6 +8,7 @@
   }
 </script>
 <style scoped>
+  /*@import "../static/styles/demo.less";*/
   *{
     font-family: "微软雅黑";
     padding:0;

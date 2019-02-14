@@ -9,13 +9,13 @@
 </template>
 
 <script>
-  import tabbar from './components/TabBar.vue'
-  export default {
-      name: 'App',
-    components: {
-      tabbar
-    }
+import tabbar from './components/TabBar.vue'
+export default {
+  name: 'App1',
+  components: {
+    tabbar
   }
+}
 </script>
 <style scoped>
   *{

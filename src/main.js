@@ -13,7 +13,8 @@ import {Badge} from 'vue-ydui/dist/lib.rem/badge'
 import {Layout} from 'vue-ydui/dist/lib.rem/layout'
 import {Slider, SliderItem} from 'vue-ydui/dist/lib.rem/slider'
 import { Confirm, Alert, Toast, Notify, Loading } from 'vue-ydui/dist/lib.rem/dialog'
-import App from './App'
+import {Input} from 'vue-ydui/dist/lib.rem/input'
+import App from './App1'
 import router from './router'
 Vue.config.productionTip = false
 
@@ -34,6 +35,7 @@ Vue.component(Badge.name, Badge)
 Vue.component(Layout.name, Layout)
 Vue.component(Slider.name, Slider)
 Vue.component(SliderItem.name, SliderItem)
+Vue.component(Input.name, Input)
 Vue.prototype.$dialog = {
   confirm: Confirm,
   alert: Alert,

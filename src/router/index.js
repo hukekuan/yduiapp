@@ -9,11 +9,15 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/pcmap'
+      redirect: '/login'
     },
     {
       path: '/pcmap',
       component: resolve => require(['../pages/Map.vue'], resolve)
+    },
+    {
+      path: '/login',
+      component: resolve => require(['../pages/LogIn.vue'], resolve)
     },
     {
       path: '/home',
