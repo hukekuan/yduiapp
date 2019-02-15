@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     mapViewReset () {
-        bus.$emit('maptool', 'mapViewReset')
+      bus.$emit('maptool', 'mapViewReset')
     },
     zoomIn () {
       bus.$emit('maptool', 'zoomIn')

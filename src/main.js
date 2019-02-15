@@ -15,7 +15,9 @@ import {Slider, SliderItem} from 'vue-ydui/dist/lib.rem/slider'
 import { Confirm, Alert, Toast, Notify, Loading } from 'vue-ydui/dist/lib.rem/dialog'
 import {Input} from 'vue-ydui/dist/lib.rem/input'
 import App from './App1'
+import axios from 'axios'
 import router from './router'
+Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
 Vue.component(ActionSheet.name, ActionSheet)
