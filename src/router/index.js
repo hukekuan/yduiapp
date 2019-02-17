@@ -1,15 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 Vue.use(Router)
-
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: '/',
   routes: [
     {
       path: '/',
-      redirect: '/login'
+      redirect: '/home'
     },
     {
       path: '/pcmap',
@@ -41,3 +39,15 @@ export default new Router({
     }
   ]
 })
+router.beforeEach((to, from, next) => {
+  let token = window.localStorage.getItem('token')
+  console.log('router_token: ' + token)
+  console.log('to.path: ' + to.path)
+  if (token === null && to.path !== '/login') {
+    next('/login')
+  } else {
+    next()
+  }
+})
+
+export default router

@@ -25,7 +25,7 @@
 </template>
 
 <script type="text/babel">
-import Cookies from 'js-cookie'
+
 export default {
   data () {
     return {
@@ -43,17 +43,16 @@ export default {
   },
   methods: {
     clickHander () {
-      // const input = this.$refs.input9
-      const self = this
-      console.log('process.env.API_ROOT: ' + process.env.API_ROOT)
-      self.$axios.post(process.env.API_ROOT + '/tokenlogin', {
-        'username': 'root',
-        'password': '123'
-      }).then((res) => {
-        const data = res.data
-        Cookies.set('key', data.token)
-        self.$router.push('/home')
-      })
+      // const self = this
+      // self.$axios.post(process.env.API_ROOT + '/sys/tokenlogin', {
+      //   'username': 'admin',
+      //   'password': '123456'
+      // }).then((res) => {
+      //   const data = res.data
+      //   Cookies.set('key', data.token)
+      //   self.$router.push('/home')
+      // })
+      this.$store.dispatch('login', {'username': 'admin', 'password': '123456'})
     }
   }
 }

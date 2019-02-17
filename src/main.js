@@ -17,6 +17,7 @@ import {Input} from 'vue-ydui/dist/lib.rem/input'
 import App from './App1'
 import axios from 'axios'
 import router from './router'
+import store from './store'
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
@@ -50,6 +51,7 @@ Vue.prototype.$dialog = {
 
 new Vue({
   el: '#app',
+  store,
   router,
   components: { App },
   template: '<App/>'
