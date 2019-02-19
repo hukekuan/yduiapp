@@ -1,4 +1,5 @@
 import axios from 'axios'
+import router from '../../router'
 
 const auth = {
   state: {
@@ -20,25 +21,19 @@ const auth = {
   },
   actions: {
     login ({ commit, state }, userInfo) {
-      return new Promise((resolve, reject) => {
-        axios.post(process.env.API_ROOT + '/sys/tokenlogin', {
-          'username': userInfo.username,
-          'password': userInfo.password
-        }).then((resp) => {
-          const data = resp.data
-          commit('SET_STSTUS', 'success')
-          commit('SET_TOKEN', data.token)
-          window.localStorage.setItem('token', data.token)
-
-          console.log('============ ' + localStorage.getItem('token') + ' ============')
-          // self.$router.push('/home')
-          resolve(resp)
-        }).catch(err => {
-          commit('SET_STSTUS', 'error')
-          commit('SET_TOKEN', undefined)
-          localStorage.removeItem('token')
-          reject(err)
-        })
+      axios.post(process.env.API_ROOT + '/sys/tokenlogin', {
+        'username': userInfo.username,
+        'password': userInfo.password
+      }).then((resp) => {
+        const data = resp.data
+        commit('SET_STSTUS', 'success')
+        commit('SET_TOKEN', data.token)
+        window.localStorage.setItem('token', data.token)
+        router.push('/home')
+      }).catch(err => {
+        commit('SET_STSTUS', 'error')
+        commit('SET_TOKEN', undefined)
+        localStorage.removeItem('token')
       })
     }
   }
