@@ -1,5 +1,5 @@
 'use strict'
 module.exports = {
   NODE_ENV: '"production"',
-  API_ROOT: '"http://localhost:8080/api/"'
+  API_ROOT: '"http://localhost:8080/c3framework/api"'
 }
