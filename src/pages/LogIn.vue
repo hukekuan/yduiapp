@@ -52,7 +52,7 @@ export default {
       //   Cookies.set('key', data.token)
       //   self.$router.push('/home')
       // })
-      this.$store.dispatch('login', {'username': 'admin', 'password': '123456'})
+      this.$store.dispatch('auth/login', {'username': 'admin', 'password': '123456'})
     }
   }
 }

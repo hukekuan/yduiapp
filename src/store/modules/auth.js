@@ -2,6 +2,7 @@ import axios from 'axios'
 import router from '../../router'
 
 const auth = {
+  namespaced: true,
   state: {
     status: '',
     token: localStorage.getItem('token') || '',

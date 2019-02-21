@@ -44,15 +44,15 @@ Vue.prototype.$dialog = {
   alert: Alert,
   toast: Toast,
   notify: Notify,
-  loading: Loading,
+  loading: Loading
 }
 
 /* eslint-disable no-new */
 
 new Vue({
   el: '#app',
-  store,
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

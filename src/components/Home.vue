@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations, actions } from 'vuex'
 import hello from './HelloWorld.vue'
 export default {
   name: 'Home',
@@ -34,6 +35,7 @@ export default {
       })
     },
     parentFn (data) {
+      console.log('token：', this.$store.state.auth.token)
       console.log('父组件：', data)
     }
   }
