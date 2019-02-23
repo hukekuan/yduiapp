@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from '../store'
 Vue.use(Router)
 const router = new Router({
   mode: 'history',
@@ -41,9 +42,8 @@ const router = new Router({
   ]
 })
 router.beforeEach((to, from, next) => {
-  let token = window.localStorage.getItem('token')
-
-  if (token === null && to.path !== '/login') {
+  let token = store.state.auth.token
+  if ((token === null || token === '') && to.path !== '/login') {
     next('/login')
   } else {
     next()

@@ -5,7 +5,7 @@ const auth = {
   namespaced: true,
   state: {
     status: '',
-    token: localStorage.getItem('token') || '',
+    token: '',
     user: {}
   },
   getters: {
